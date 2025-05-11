@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emotion Tracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>How are you feeling?</h1>
+  
+  <p>Rate your current mood from 1 (lowest) to 10 (highest).</p>
+  <input type="number" id="rating" min="1" max="10" placeholder="1-10" />
+  <button onclick="saveRating()">Save Mood</button>
+
+  <h2>Mood History</h2>
+  <div id="history"></div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

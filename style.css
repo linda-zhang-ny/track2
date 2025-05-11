@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+input {
+  width: 60px;
+  font-size: 1.2rem;
+}
